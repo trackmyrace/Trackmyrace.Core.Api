@@ -1,5 +1,5 @@
 {
-    "name": "trackmyrace/core",
+    "name": "trackmyrace/core-api",
     "type": "typo3-flow-package",
     "description": "",
     "require": {
