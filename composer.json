@@ -7,12 +7,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Trackmyrace\\Core\\Api": "Classes"
+            "Trackmyrace\\Core\\Api\\": "Classes"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Trackmyrace\\Core\\Tests": "Tests"
+            "Trackmyrace\\Core\\Tests\\": "Tests"
         }
     },
     "extra": {
