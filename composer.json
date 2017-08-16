@@ -1,0 +1,23 @@
+{
+    "name": "trackmyrace/core",
+    "type": "typo3-flow-package",
+    "description": "",
+    "require": {
+        "neos/flow": "~3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Trackmyrace\\Core\\Api": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Trackmyrace\\Core\\Tests": "Tests"
+        }
+    },
+    "extra": {
+        "applied-flow-migrations": [
+            "TYPO3.Flow-20151113161300"
+        ]
+    }
+}

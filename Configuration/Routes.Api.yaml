@@ -1,0 +1,80 @@
+
+-
+  name: 'REST API discovery entry point'
+  uriPattern: ''
+  defaults:
+    '@controller': 'Entry'
+    '@action':     'index'
+    '@format':     'json'
+
+-
+  name: 'REST API single resource entry point'
+  uriPattern: '{@controller}/{resource}(/{@action})'
+  defaults:
+    '@action':     'index'
+    '@format':     'json'
+  routeParts:
+    '@controller':
+      handler: 'Trackmyrace\Core\Api\Routing\RegexRoutePart'
+      options:
+        pattern: '/[a-z][a-z0-9]*/i'
+    'resource':
+      handler: 'Trackmyrace\Core\Api\Routing\ResourceRoutePart'
+    '@action':
+      handler: 'Trackmyrace\Core\Api\Routing\RegexRoutePart'
+      options:
+        pattern: '/[a-z][a-z0-9]*/i'
+  appendExceedingArguments: true
+
+-
+  name: 'REST API single resource entry point with format'
+  uriPattern: '{@controller}/{resource}(/{@action}).{@format}'
+  defaults:
+    '@action':     'index'
+    '@format':     'json'
+  routeParts:
+    '@controller':
+      handler: 'Trackmyrace\Core\Api\Routing\RegexRoutePart'
+      options:
+        pattern: '/[a-z][a-z0-9]*/i'
+    'resource':
+      handler: 'Trackmyrace\Core\Api\Routing\ResourceRoutePart'
+    '@action':
+      handler: 'Trackmyrace\Core\Api\Routing\RegexRoutePart'
+      options:
+        pattern: '/[a-z][a-z0-9]*/i'
+  appendExceedingArguments: true
+
+-
+  name: 'REST API generic resource entry point'
+  uriPattern: '{@controller}(/{@action})'
+  defaults:
+    '@action':     'index'
+    '@format':     'json'
+  routeParts:
+    '@controller':
+      handler: 'Trackmyrace\Core\Api\Routing\RegexRoutePart'
+      options:
+        pattern: '/[a-z][a-z0-9]*/i'
+    '@action':
+      handler: 'Trackmyrace\Core\Api\Routing\RegexRoutePart'
+      options:
+        pattern: '/[a-z][a-z0-9]*/i'
+  appendExceedingArguments: true
+
+-
+  name: 'REST API generic resource entry point with format'
+  uriPattern: '{@controller}(/{@action}).{@format}'
+  defaults:
+    '@action':     'index'
+    '@format':     'json'
+  routeParts:
+    '@controller':
+      handler: 'Trackmyrace\Core\Api\Routing\RegexRoutePart'
+      options:
+        pattern: '/[a-z][a-z0-9]*/i'
+    '@action':
+      handler: 'Trackmyrace\Core\Api\Routing\RegexRoutePart'
+      options:
+        pattern: '/[a-z][a-z0-9]*/i'
+  appendExceedingArguments: true

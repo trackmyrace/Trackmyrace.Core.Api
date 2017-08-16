@@ -1,0 +1,5 @@
+Trackmyrace:
+  Core:
+    api:
+      useAbsoluteUris: true
+      normalizeResourceTypes: false

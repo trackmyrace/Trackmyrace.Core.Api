@@ -1,0 +1,10 @@
+-
+  name: 'Functional Test: API test Route'
+  uriPattern: 'test/api/<ApiSubroutes>'
+  defaults:
+    '@package':    'Trackmyrace.Core'
+    '@subpackage': 'Tests\Functional\Api\Fixtures'
+  subRoutes:
+    ApiSubroutes:
+      package:     'Trackmyrace.Core'
+      suffix:      'Api'
